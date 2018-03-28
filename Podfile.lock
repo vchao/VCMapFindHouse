@@ -1,0 +1,34 @@
+PODS:
+  - AMap3DMap (6.0.0):
+    - AMapFoundation (~> 1.4)
+  - AMapFoundation (1.4.3)
+  - AMapSearch (5.7.0):
+    - AMapFoundation (~> 1.4)
+  - FMDB (2.7.2):
+    - FMDB/standard (= 2.7.2)
+  - FMDB/standard (2.7.2)
+  - LKDBHelper (2.5.1):
+    - LKDBHelper/standard (= 2.5.1)
+  - LKDBHelper/standard (2.5.1):
+    - FMDB
+  - MJExtension (3.0.13)
+
+DEPENDENCIES:
+  - AMap3DMap
+  - AMapFoundation
+  - AMapSearch
+  - FMDB
+  - LKDBHelper
+  - MJExtension (~> 3.0.13)
+
+SPEC CHECKSUMS:
+  AMap3DMap: ee8172d81560e9f6548d6e6010444df7e3d00fc7
+  AMapFoundation: 973682cfe60b92efd73a8ef8f1144fa0fa8e1296
+  AMapSearch: 314f75e9ce282b53dbf66455efa416c39f12b5b1
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
+  LKDBHelper: 9a276ba51f2e16263d46a9517e16cc9b03472664
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+
+PODFILE CHECKSUM: 16af76d05df6d0d9a0fd0886de20d437dbba9c53
+
+COCOAPODS: 1.4.0

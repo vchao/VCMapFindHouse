@@ -1,0 +1,708 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D49D107952E25BFF1AAD59E /* libPods-VCMapFindHouse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73898CA5F922840C4E8C2421 /* libPods-VCMapFindHouse.a */; };
+		875FF3A0205B5B870058A899 /* VCTownModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 875FF39F205B5B870058A899 /* VCTownModel.m */; };
+		875FF3A3205B5CF60058A899 /* VCPoiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 875FF3A2205B5CF60058A899 /* VCPoiModel.m */; };
+		875FF3A6205BA0050058A899 /* VCAreaAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 875FF3A5205BA0050058A899 /* VCAreaAnnotation.m */; };
+		87668CFB205A5832003FEA26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87668CFA205A5832003FEA26 /* AppDelegate.m */; };
+		87668D01205A5832003FEA26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87668CFF205A5832003FEA26 /* Main.storyboard */; };
+		87668D03205A5832003FEA26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87668D02205A5832003FEA26 /* Assets.xcassets */; };
+		87668D06205A5832003FEA26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87668D04205A5832003FEA26 /* LaunchScreen.storyboard */; };
+		87668D09205A5832003FEA26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87668D08205A5832003FEA26 /* main.m */; };
+		87668D13205A5832003FEA26 /* VCMapFindHouseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87668D12205A5832003FEA26 /* VCMapFindHouseTests.m */; };
+		87668D1E205A5832003FEA26 /* VCMapFindHouseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87668D1D205A5832003FEA26 /* VCMapFindHouseUITests.m */; };
+		87668D2D205A5E25003FEA26 /* VCMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87668D2C205A5E25003FEA26 /* VCMapViewController.m */; };
+		87668D2F205A5FE9003FEA26 /* 2017100914001500.json in Resources */ = {isa = PBXBuildFile; fileRef = 87668D2E205A5FE9003FEA26 /* 2017100914001500.json */; };
+		87668D32205A6997003FEA26 /* VCAreaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87668D31205A6997003FEA26 /* VCAreaModel.m */; };
+		87668D35205A728B003FEA26 /* DBM.m in Sources */ = {isa = PBXBuildFile; fileRef = 87668D34205A728B003FEA26 /* DBM.m */; };
+		87668D38205A77E9003FEA26 /* VCDAOModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 87668D37205A77E9003FEA26 /* VCDAOModelBase.m */; };
+		876863A3206B330B00E100B4 /* UIImage+VCMapFindHouse.m in Sources */ = {isa = PBXBuildFile; fileRef = 876863A2206B330B00E100B4 /* UIImage+VCMapFindHouse.m */; };
+		876863A6206B3A3A00E100B4 /* VCPoiAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 876863A5206B3A3A00E100B4 /* VCPoiAnnotationView.m */; };
+		876863A9206B3D4F00E100B4 /* NSString+Extent.m in Sources */ = {isa = PBXBuildFile; fileRef = 876863A8206B3D4F00E100B4 /* NSString+Extent.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		87668D0F205A5832003FEA26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87668CEE205A5832003FEA26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87668CF5205A5832003FEA26;
+			remoteInfo = VCMapFindHouse;
+		};
+		87668D1A205A5832003FEA26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87668CEE205A5832003FEA26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87668CF5205A5832003FEA26;
+			remoteInfo = VCMapFindHouse;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		007C1BF1D894C22A17FE0A41 /* Pods-VCMapFindHouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCMapFindHouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VCMapFindHouse/Pods-VCMapFindHouse.debug.xcconfig"; sourceTree = "<group>"; };
+		6AC3A320C416506B1631D267 /* Pods-VCMapFindHouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCMapFindHouse.release.xcconfig"; path = "Pods/Target Support Files/Pods-VCMapFindHouse/Pods-VCMapFindHouse.release.xcconfig"; sourceTree = "<group>"; };
+		73898CA5F922840C4E8C2421 /* libPods-VCMapFindHouse.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VCMapFindHouse.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		875FF39E205B5B870058A899 /* VCTownModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCTownModel.h; sourceTree = "<group>"; };
+		875FF39F205B5B870058A899 /* VCTownModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCTownModel.m; sourceTree = "<group>"; };
+		875FF3A1205B5CF60058A899 /* VCPoiModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCPoiModel.h; sourceTree = "<group>"; };
+		875FF3A2205B5CF60058A899 /* VCPoiModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCPoiModel.m; sourceTree = "<group>"; };
+		875FF3A4205BA0050058A899 /* VCAreaAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCAreaAnnotation.h; sourceTree = "<group>"; };
+		875FF3A5205BA0050058A899 /* VCAreaAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCAreaAnnotation.m; sourceTree = "<group>"; };
+		87668CF6205A5832003FEA26 /* VCMapFindHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCMapFindHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87668CF9205A5832003FEA26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		87668CFA205A5832003FEA26 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		87668D00205A5832003FEA26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		87668D02205A5832003FEA26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87668D05205A5832003FEA26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		87668D07205A5832003FEA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87668D08205A5832003FEA26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		87668D0E205A5832003FEA26 /* VCMapFindHouseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VCMapFindHouseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87668D12205A5832003FEA26 /* VCMapFindHouseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCMapFindHouseTests.m; sourceTree = "<group>"; };
+		87668D14205A5832003FEA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87668D19205A5832003FEA26 /* VCMapFindHouseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VCMapFindHouseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87668D1D205A5832003FEA26 /* VCMapFindHouseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCMapFindHouseUITests.m; sourceTree = "<group>"; };
+		87668D1F205A5832003FEA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87668D2B205A5E25003FEA26 /* VCMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCMapViewController.h; sourceTree = "<group>"; };
+		87668D2C205A5E25003FEA26 /* VCMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCMapViewController.m; sourceTree = "<group>"; };
+		87668D2E205A5FE9003FEA26 /* 2017100914001500.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 2017100914001500.json; sourceTree = "<group>"; };
+		87668D30205A6997003FEA26 /* VCAreaModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCAreaModel.h; sourceTree = "<group>"; };
+		87668D31205A6997003FEA26 /* VCAreaModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCAreaModel.m; sourceTree = "<group>"; };
+		87668D33205A728B003FEA26 /* DBM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBM.h; sourceTree = "<group>"; };
+		87668D34205A728B003FEA26 /* DBM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBM.m; sourceTree = "<group>"; };
+		87668D36205A77E9003FEA26 /* VCDAOModelBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCDAOModelBase.h; sourceTree = "<group>"; };
+		87668D37205A77E9003FEA26 /* VCDAOModelBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCDAOModelBase.m; sourceTree = "<group>"; };
+		876863A1206B330B00E100B4 /* UIImage+VCMapFindHouse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+VCMapFindHouse.h"; sourceTree = "<group>"; };
+		876863A2206B330B00E100B4 /* UIImage+VCMapFindHouse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+VCMapFindHouse.m"; sourceTree = "<group>"; };
+		876863A4206B3A3A00E100B4 /* VCPoiAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCPoiAnnotationView.h; sourceTree = "<group>"; };
+		876863A5206B3A3A00E100B4 /* VCPoiAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCPoiAnnotationView.m; sourceTree = "<group>"; };
+		876863A7206B3D4F00E100B4 /* NSString+Extent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Extent.h"; sourceTree = "<group>"; };
+		876863A8206B3D4F00E100B4 /* NSString+Extent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extent.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87668CF3205A5832003FEA26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D49D107952E25BFF1AAD59E /* libPods-VCMapFindHouse.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87668D0B205A5832003FEA26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87668D16205A5832003FEA26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5205D9030E425D214BF79FE5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				007C1BF1D894C22A17FE0A41 /* Pods-VCMapFindHouse.debug.xcconfig */,
+				6AC3A320C416506B1631D267 /* Pods-VCMapFindHouse.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		671EAD7411BC8DD403936F5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73898CA5F922840C4E8C2421 /* libPods-VCMapFindHouse.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		87668CED205A5832003FEA26 = {
+			isa = PBXGroup;
+			children = (
+				87668CF8205A5832003FEA26 /* VCMapFindHouse */,
+				87668D11205A5832003FEA26 /* VCMapFindHouseTests */,
+				87668D1C205A5832003FEA26 /* VCMapFindHouseUITests */,
+				87668CF7205A5832003FEA26 /* Products */,
+				5205D9030E425D214BF79FE5 /* Pods */,
+				671EAD7411BC8DD403936F5A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		87668CF7205A5832003FEA26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87668CF6205A5832003FEA26 /* VCMapFindHouse.app */,
+				87668D0E205A5832003FEA26 /* VCMapFindHouseTests.xctest */,
+				87668D19205A5832003FEA26 /* VCMapFindHouseUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87668CF8205A5832003FEA26 /* VCMapFindHouse */ = {
+			isa = PBXGroup;
+			children = (
+				876863A0206B26EE00E100B4 /* DB */,
+				8768639F206B269100E100B4 /* Model */,
+				87668D2E205A5FE9003FEA26 /* 2017100914001500.json */,
+				87668CF9205A5832003FEA26 /* AppDelegate.h */,
+				87668CFA205A5832003FEA26 /* AppDelegate.m */,
+				87668CFF205A5832003FEA26 /* Main.storyboard */,
+				87668D02205A5832003FEA26 /* Assets.xcassets */,
+				87668D04205A5832003FEA26 /* LaunchScreen.storyboard */,
+				87668D07205A5832003FEA26 /* Info.plist */,
+				87668D08205A5832003FEA26 /* main.m */,
+				87668D2B205A5E25003FEA26 /* VCMapViewController.h */,
+				87668D2C205A5E25003FEA26 /* VCMapViewController.m */,
+				875FF3A4205BA0050058A899 /* VCAreaAnnotation.h */,
+				875FF3A5205BA0050058A899 /* VCAreaAnnotation.m */,
+				876863A1206B330B00E100B4 /* UIImage+VCMapFindHouse.h */,
+				876863A2206B330B00E100B4 /* UIImage+VCMapFindHouse.m */,
+				876863A4206B3A3A00E100B4 /* VCPoiAnnotationView.h */,
+				876863A5206B3A3A00E100B4 /* VCPoiAnnotationView.m */,
+				876863A7206B3D4F00E100B4 /* NSString+Extent.h */,
+				876863A8206B3D4F00E100B4 /* NSString+Extent.m */,
+			);
+			path = VCMapFindHouse;
+			sourceTree = "<group>";
+		};
+		87668D11205A5832003FEA26 /* VCMapFindHouseTests */ = {
+			isa = PBXGroup;
+			children = (
+				87668D12205A5832003FEA26 /* VCMapFindHouseTests.m */,
+				87668D14205A5832003FEA26 /* Info.plist */,
+			);
+			path = VCMapFindHouseTests;
+			sourceTree = "<group>";
+		};
+		87668D1C205A5832003FEA26 /* VCMapFindHouseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				87668D1D205A5832003FEA26 /* VCMapFindHouseUITests.m */,
+				87668D1F205A5832003FEA26 /* Info.plist */,
+			);
+			path = VCMapFindHouseUITests;
+			sourceTree = "<group>";
+		};
+		8768639F206B269100E100B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				87668D30205A6997003FEA26 /* VCAreaModel.h */,
+				87668D31205A6997003FEA26 /* VCAreaModel.m */,
+				875FF39E205B5B870058A899 /* VCTownModel.h */,
+				875FF39F205B5B870058A899 /* VCTownModel.m */,
+				875FF3A1205B5CF60058A899 /* VCPoiModel.h */,
+				875FF3A2205B5CF60058A899 /* VCPoiModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		876863A0206B26EE00E100B4 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				87668D33205A728B003FEA26 /* DBM.h */,
+				87668D34205A728B003FEA26 /* DBM.m */,
+				87668D36205A77E9003FEA26 /* VCDAOModelBase.h */,
+				87668D37205A77E9003FEA26 /* VCDAOModelBase.m */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		87668CF5205A5832003FEA26 /* VCMapFindHouse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87668D22205A5832003FEA26 /* Build configuration list for PBXNativeTarget "VCMapFindHouse" */;
+			buildPhases = (
+				04CDA2D34CF591467480AE47 /* [CP] Check Pods Manifest.lock */,
+				87668CF2205A5832003FEA26 /* Sources */,
+				87668CF3205A5832003FEA26 /* Frameworks */,
+				87668CF4205A5832003FEA26 /* Resources */,
+				298A4A636B5520FCF957728A /* [CP] Embed Pods Frameworks */,
+				2B0E4EAFD4E215F22C1CB7A2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VCMapFindHouse;
+			productName = VCMapFindHouse;
+			productReference = 87668CF6205A5832003FEA26 /* VCMapFindHouse.app */;
+			productType = "com.apple.product-type.application";
+		};
+		87668D0D205A5832003FEA26 /* VCMapFindHouseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87668D25205A5832003FEA26 /* Build configuration list for PBXNativeTarget "VCMapFindHouseTests" */;
+			buildPhases = (
+				87668D0A205A5832003FEA26 /* Sources */,
+				87668D0B205A5832003FEA26 /* Frameworks */,
+				87668D0C205A5832003FEA26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87668D10205A5832003FEA26 /* PBXTargetDependency */,
+			);
+			name = VCMapFindHouseTests;
+			productName = VCMapFindHouseTests;
+			productReference = 87668D0E205A5832003FEA26 /* VCMapFindHouseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		87668D18205A5832003FEA26 /* VCMapFindHouseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87668D28205A5832003FEA26 /* Build configuration list for PBXNativeTarget "VCMapFindHouseUITests" */;
+			buildPhases = (
+				87668D15205A5832003FEA26 /* Sources */,
+				87668D16205A5832003FEA26 /* Frameworks */,
+				87668D17205A5832003FEA26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87668D1B205A5832003FEA26 /* PBXTargetDependency */,
+			);
+			name = VCMapFindHouseUITests;
+			productName = VCMapFindHouseUITests;
+			productReference = 87668D19205A5832003FEA26 /* VCMapFindHouseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		87668CEE205A5832003FEA26 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = vchao;
+				TargetAttributes = {
+					87668CF5205A5832003FEA26 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					87668D0D205A5832003FEA26 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 87668CF5205A5832003FEA26;
+					};
+					87668D18205A5832003FEA26 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 87668CF5205A5832003FEA26;
+					};
+				};
+			};
+			buildConfigurationList = 87668CF1205A5832003FEA26 /* Build configuration list for PBXProject "VCMapFindHouse" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 87668CED205A5832003FEA26;
+			productRefGroup = 87668CF7205A5832003FEA26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87668CF5205A5832003FEA26 /* VCMapFindHouse */,
+				87668D0D205A5832003FEA26 /* VCMapFindHouseTests */,
+				87668D18205A5832003FEA26 /* VCMapFindHouseUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		87668CF4205A5832003FEA26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87668D2F205A5FE9003FEA26 /* 2017100914001500.json in Resources */,
+				87668D06205A5832003FEA26 /* LaunchScreen.storyboard in Resources */,
+				87668D03205A5832003FEA26 /* Assets.xcassets in Resources */,
+				87668D01205A5832003FEA26 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87668D0C205A5832003FEA26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87668D17205A5832003FEA26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04CDA2D34CF591467480AE47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VCMapFindHouse-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		298A4A636B5520FCF957728A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VCMapFindHouse/Pods-VCMapFindHouse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B0E4EAFD4E215F22C1CB7A2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VCMapFindHouse/Pods-VCMapFindHouse-resources.sh",
+				"${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VCMapFindHouse/Pods-VCMapFindHouse-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		87668CF2205A5832003FEA26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87668D38205A77E9003FEA26 /* VCDAOModelBase.m in Sources */,
+				875FF3A3205B5CF60058A899 /* VCPoiModel.m in Sources */,
+				87668D35205A728B003FEA26 /* DBM.m in Sources */,
+				87668D2D205A5E25003FEA26 /* VCMapViewController.m in Sources */,
+				87668D09205A5832003FEA26 /* main.m in Sources */,
+				875FF3A0205B5B870058A899 /* VCTownModel.m in Sources */,
+				87668CFB205A5832003FEA26 /* AppDelegate.m in Sources */,
+				876863A6206B3A3A00E100B4 /* VCPoiAnnotationView.m in Sources */,
+				876863A3206B330B00E100B4 /* UIImage+VCMapFindHouse.m in Sources */,
+				875FF3A6205BA0050058A899 /* VCAreaAnnotation.m in Sources */,
+				87668D32205A6997003FEA26 /* VCAreaModel.m in Sources */,
+				876863A9206B3D4F00E100B4 /* NSString+Extent.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87668D0A205A5832003FEA26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87668D13205A5832003FEA26 /* VCMapFindHouseTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87668D15205A5832003FEA26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87668D1E205A5832003FEA26 /* VCMapFindHouseUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		87668D10205A5832003FEA26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87668CF5205A5832003FEA26 /* VCMapFindHouse */;
+			targetProxy = 87668D0F205A5832003FEA26 /* PBXContainerItemProxy */;
+		};
+		87668D1B205A5832003FEA26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87668CF5205A5832003FEA26 /* VCMapFindHouse */;
+			targetProxy = 87668D1A205A5832003FEA26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		87668CFF205A5832003FEA26 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87668D00205A5832003FEA26 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		87668D04205A5832003FEA26 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87668D05205A5832003FEA26 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		87668D20205A5832003FEA26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		87668D21205A5832003FEA26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		87668D23205A5832003FEA26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 007C1BF1D894C22A17FE0A41 /* Pods-VCMapFindHouse.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VCMapFindHouse/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vchao.VCMapFindHouse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		87668D24205A5832003FEA26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AC3A320C416506B1631D267 /* Pods-VCMapFindHouse.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VCMapFindHouse/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vchao.VCMapFindHouse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		87668D26205A5832003FEA26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VCMapFindHouseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vchao.VCMapFindHouseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VCMapFindHouse.app/VCMapFindHouse";
+			};
+			name = Debug;
+		};
+		87668D27205A5832003FEA26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VCMapFindHouseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vchao.VCMapFindHouseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VCMapFindHouse.app/VCMapFindHouse";
+			};
+			name = Release;
+		};
+		87668D29205A5832003FEA26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VCMapFindHouseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vchao.VCMapFindHouseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VCMapFindHouse;
+			};
+			name = Debug;
+		};
+		87668D2A205A5832003FEA26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VCMapFindHouseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vchao.VCMapFindHouseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VCMapFindHouse;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		87668CF1205A5832003FEA26 /* Build configuration list for PBXProject "VCMapFindHouse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87668D20205A5832003FEA26 /* Debug */,
+				87668D21205A5832003FEA26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87668D22205A5832003FEA26 /* Build configuration list for PBXNativeTarget "VCMapFindHouse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87668D23205A5832003FEA26 /* Debug */,
+				87668D24205A5832003FEA26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87668D25205A5832003FEA26 /* Build configuration list for PBXNativeTarget "VCMapFindHouseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87668D26205A5832003FEA26 /* Debug */,
+				87668D27205A5832003FEA26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87668D28205A5832003FEA26 /* Build configuration list for PBXNativeTarget "VCMapFindHouseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87668D29205A5832003FEA26 /* Debug */,
+				87668D2A205A5832003FEA26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 87668CEE205A5832003FEA26 /* Project object */;
+}
