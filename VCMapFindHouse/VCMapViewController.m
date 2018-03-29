@@ -12,7 +12,8 @@
 #import "VCPoiModel.h"
 #import <MJExtension/MJExtension.h>
 #import <CoreLocation/CoreLocation.h>
-#import "VCAreaAnnotation.h"
+#import "VCPointAnnotation.h"
+#import "VCAreaAnnotationView.h"
 #import "VCPoiAnnotationView.h"
 #import <MAMapKit/MAAnnotation.h>
 
@@ -127,7 +128,7 @@
         if (annotationView == nil) {
             annotationView = [[VCPoiAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:customReuseIndetifier];
             annotationView.canShowCallout = NO;
-            annotationView.highlighted = YES;
+            annotationView.highlighted = NO;
             annotationView.draggable = YES;
             annotationView.calloutOffset = CGPointMake(0, -24);
         }
@@ -146,14 +147,13 @@
     }else{
         static NSString *customReuseIndetifier = @"customReuseIndetifier";
         
-        VCAreaAnnotation *annotationView = (VCAreaAnnotation *)[mapView dequeueReusableAnnotationViewWithIdentifier:customReuseIndetifier];
+        VCAreaAnnotationView *annotationView = (VCAreaAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:customReuseIndetifier];
         
         if (annotationView == nil) {
-            annotationView = [[VCAreaAnnotation alloc] initWithAnnotation:annotation reuseIdentifier:customReuseIndetifier];
+            annotationView = [[VCAreaAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:customReuseIndetifier];
             annotationView.canShowCallout = NO;
-            annotationView.highlighted = YES;
+            annotationView.highlighted = NO;
             annotationView.draggable = YES;
-//            annotationView.calloutOffset = CGPointMake(0, -5);
         }
         
         annotationView.image = [UIImage circleAndStretchableImageWithColor:[UIColor colorWithRed:80/255.f green:180/255.f blue:115/255.f alpha:0.9] size:CGSizeMake(64, 64)];
@@ -161,6 +161,12 @@
         annotationView.priceLabel.text = annotation.subtitle;
         return annotationView;
     }
+}
+
+- (void)mapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view
+{
+    VCPointAnnotation *pa = (VCPointAnnotation *)view.annotation;
+    NSLog(@"%ld----%ld", pa.pointID, pa.annotationType);
 }
 
 - (void)refreshAnnotation
@@ -181,36 +187,42 @@
         NSString *sqlStr = [[NSString alloc] initWithFormat:@"select * from @t where cityID=%ld and lat >= %f and lat <= %f and lng >= %f and lng <= %f", self.cityID, southLat, northLat, westLng, eastLng];
         NSArray *poiArray = [globalHelper searchWithSQL:sqlStr toClass:[VCPoiModel class]];
         for (VCPoiModel *model in poiArray) {
-            MAAnimatedAnnotation *aa = [[MAAnimatedAnnotation alloc] init];
-            aa.coordinate = CLLocationCoordinate2DMake(model.lat, model.lng);
-            aa.title = [NSString stringWithFormat:@"%@ %.1f万", model.name, model.price/10000.f];
-            aa.subtitle = [NSString stringWithFormat:@"%ld套", model.houseCount];
-            [self.annotationArray addObject:aa];
-            [self.mapView addAnnotation:aa];
+            VCPointAnnotation *pa = [[VCPointAnnotation alloc] init];
+            pa.annotationType = AnnotationTypeVillage;
+            pa.pointID = model.pID;
+            pa.coordinate = CLLocationCoordinate2DMake(model.lat, model.lng);
+            pa.title = [NSString stringWithFormat:@"%@ %.1f万", model.name, model.price/10000.f];
+            pa.subtitle = [NSString stringWithFormat:@"%ld套", model.houseCount];
+            [self.annotationArray addObject:pa];
+            [self.mapView addAnnotation:pa];
         }
     }else if (self.mapView.zoomLevel >= 12.5) {
         LKDBHelper* globalHelper = [VCDAOModelBase getUsingLKDBHelper];
         NSString *sqlStr = [[NSString alloc] initWithFormat:@"select * from @t where cityID=%ld and lat >= %f and lat <= %f and lng >= %f and lng <= %f", self.cityID, southLat, northLat, westLng, eastLng];
         NSArray *townArray = [globalHelper searchWithSQL:sqlStr toClass:[VCTownModel class]];
         for (VCTownModel *model in townArray) {
-            MAAnimatedAnnotation *aa = [[MAAnimatedAnnotation alloc] init];
-            aa.coordinate = CLLocationCoordinate2DMake(model.lat, model.lng);
-            aa.title = model.name;
-            aa.subtitle = [NSString stringWithFormat:@"%.1f万", model.price/10000.f];
-            [self.annotationArray addObject:aa];
-            [self.mapView addAnnotation:aa];
+            VCPointAnnotation *pa = [[VCPointAnnotation alloc] init];
+            pa.annotationType = AnnotationTypeTown;
+            pa.pointID = model.tID;
+            pa.coordinate = CLLocationCoordinate2DMake(model.lat, model.lng);
+            pa.title = model.name;
+            pa.subtitle = [NSString stringWithFormat:@"%.1f万", model.price/10000.f];
+            [self.annotationArray addObject:pa];
+            [self.mapView addAnnotation:pa];
         }
     }else{
         LKDBHelper* globalHelper = [VCDAOModelBase getUsingLKDBHelper];
         NSString *sqlStr = [[NSString alloc] initWithFormat:@"select * from @t where cityID=%ld and lat >= %f and lat <= %f and lng >= %f and lng <= %f", self.cityID, southLat, northLat, westLng, eastLng];
         NSArray *areaArray = [globalHelper searchWithSQL:sqlStr toClass:[VCAreaModel class]];
         for (VCAreaModel *model in areaArray) {
-            MAAnimatedAnnotation *aa = [[MAAnimatedAnnotation alloc] init];
-            aa.coordinate = CLLocationCoordinate2DMake(model.lat, model.lng);
-            aa.title = model.name;
-            aa.subtitle = [NSString stringWithFormat:@"%.1f万", model.price/10000.f];
-            [self.annotationArray addObject:aa];
-            [self.mapView addAnnotation:aa];
+            VCPointAnnotation *pa = [[VCPointAnnotation alloc] init];
+            pa.annotationType = AnnotationTypeArea;
+            pa.pointID = model.aID;
+            pa.coordinate = CLLocationCoordinate2DMake(model.lat, model.lng);
+            pa.title = model.name;
+            pa.subtitle = [NSString stringWithFormat:@"%.1f万", model.price/10000.f];
+            [self.annotationArray addObject:pa];
+            [self.mapView addAnnotation:pa];
         }
     }
 }
