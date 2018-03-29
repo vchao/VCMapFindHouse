@@ -48,7 +48,7 @@
     [self closeDB];//先关闭
     
     if (IS_NSStringEx(TEMP_DB_PATH)) {
-        [self checkFolderExistsAtPath:TEMP_DB_PATH];
+        [self checkFolderExistsAtPath:[NSString stringWithFormat:@"%@/temp/",[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]]];
         self.dataBase = [FMDatabase databaseWithPath:TEMP_DB_PATH];//获取DB文件
         self.dbQueue = [FMDatabaseQueue databaseQueueWithPath:TEMP_DB_PATH];//获取FM队列
         [DBM shareInstance].dataBase = self.dataBase;
