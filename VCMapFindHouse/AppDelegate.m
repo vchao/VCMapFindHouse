@@ -22,7 +22,8 @@
     [self.window makeKeyAndVisible];
     
     VCMapViewController *mapVC = [[VCMapViewController alloc] init];
-    self.window.rootViewController = mapVC;
+    UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:mapVC];
+    self.window.rootViewController = navigation;
     
     [[DBM shareInstance] loadDB];
     

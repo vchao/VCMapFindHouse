@@ -10,6 +10,7 @@
 		4D49D107952E25BFF1AAD59E /* libPods-VCMapFindHouse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73898CA5F922840C4E8C2421 /* libPods-VCMapFindHouse.a */; };
 		875F1827206C7B0600F9A626 /* VCAreaAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 875F1826206C7B0600F9A626 /* VCAreaAnnotationView.m */; };
 		875F182A206C7C3700F9A626 /* VCPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 875F1829206C7C3700F9A626 /* VCPointAnnotation.m */; };
+		875F182E206C87B200F9A626 /* VCVillageListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 875F182D206C87B200F9A626 /* VCVillageListView.m */; };
 		875FF3A0205B5B870058A899 /* VCTownModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 875FF39F205B5B870058A899 /* VCTownModel.m */; };
 		875FF3A3205B5CF60058A899 /* VCPoiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 875FF3A2205B5CF60058A899 /* VCPoiModel.m */; };
 		87668CFB205A5832003FEA26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87668CFA205A5832003FEA26 /* AppDelegate.m */; };
@@ -54,6 +55,8 @@
 		875F1826206C7B0600F9A626 /* VCAreaAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCAreaAnnotationView.m; sourceTree = "<group>"; };
 		875F1828206C7C3700F9A626 /* VCPointAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCPointAnnotation.h; sourceTree = "<group>"; };
 		875F1829206C7C3700F9A626 /* VCPointAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCPointAnnotation.m; sourceTree = "<group>"; };
+		875F182C206C87B200F9A626 /* VCVillageListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCVillageListView.h; sourceTree = "<group>"; };
+		875F182D206C87B200F9A626 /* VCVillageListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCVillageListView.m; sourceTree = "<group>"; };
 		875FF39E205B5B870058A899 /* VCTownModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCTownModel.h; sourceTree = "<group>"; };
 		875FF39F205B5B870058A899 /* VCTownModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCTownModel.m; sourceTree = "<group>"; };
 		875FF3A1205B5CF60058A899 /* VCPoiModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCPoiModel.h; sourceTree = "<group>"; };
@@ -145,6 +148,15 @@
 			path = Annotation;
 			sourceTree = "<group>";
 		};
+		875F182B206C877500F9A626 /* VillageListView */ = {
+			isa = PBXGroup;
+			children = (
+				875F182C206C87B200F9A626 /* VCVillageListView.h */,
+				875F182D206C87B200F9A626 /* VCVillageListView.m */,
+			);
+			path = VillageListView;
+			sourceTree = "<group>";
+		};
 		87668CED205A5832003FEA26 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +182,7 @@
 		87668CF8205A5832003FEA26 /* VCMapFindHouse */ = {
 			isa = PBXGroup;
 			children = (
+				875F182B206C877500F9A626 /* VillageListView */,
 				875F1824206C7AC800F9A626 /* Annotation */,
 				876863A0206B26EE00E100B4 /* DB */,
 				8768639F206B269100E100B4 /* Model */,
@@ -428,6 +441,7 @@
 				875FF3A3205B5CF60058A899 /* VCPoiModel.m in Sources */,
 				87668D35205A728B003FEA26 /* DBM.m in Sources */,
 				87668D2D205A5E25003FEA26 /* VCMapViewController.m in Sources */,
+				875F182E206C87B200F9A626 /* VCVillageListView.m in Sources */,
 				87668D09205A5832003FEA26 /* main.m in Sources */,
 				875FF3A0205B5B870058A899 /* VCTownModel.m in Sources */,
 				87668CFB205A5832003FEA26 /* AppDelegate.m in Sources */,

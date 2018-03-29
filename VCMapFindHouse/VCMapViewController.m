@@ -6,6 +6,9 @@
 //  Copyright © 2018年 vchao. All rights reserved.
 //
 
+#define is_iPhoneX          (([UIScreen mainScreen].bounds.size.height)==812)
+#define kNavHeight          ([[[UIDevice currentDevice]systemVersion] floatValue] >= 7.0 ? 64.0f : 44.0f)+(is_iPhoneX?24:0)
+
 #import "VCMapViewController.h"
 #import "VCAreaModel.h"
 #import "VCTownModel.h"
@@ -16,14 +19,20 @@
 #import "VCAreaAnnotationView.h"
 #import "VCPoiAnnotationView.h"
 #import <MAMapKit/MAAnnotation.h>
+#import "VCVillageListView.h"
 
 #import "UIImage+VCMapFindHouse.h"
 #import "NSString+Extent.h"
 
-@interface VCMapViewController ()
+@interface VCMapViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, assign) NSInteger cityID;
 @property (nonatomic, strong) NSMutableArray *annotationArray;
+
+@property (nonatomic, strong) VCVillageListView *vListView;
+
+@property (nonatomic, strong) NSArray     *houseArray;
+@property (nonatomic, assign) BOOL        openList;
 
 @end
 
@@ -32,12 +41,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.title = @"地图找房";
     
-    self.mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
+    self.mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, kNavHeight, self.view.bounds.size.width, self.view.bounds.size.height-(kNavHeight))];
     self.mapView.delegate = self;
     self.mapView.zoomLevel = 10;
     self.mapView.minZoomLevel = 9;
     [self.view addSubview:self.mapView];
+    
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 300)];
+    headerView.backgroundColor = [UIColor clearColor];
+    headerView.userInteractionEnabled = NO;
+    
+    if (!self.vListView) {
+        self.vListView = [[VCVillageListView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - (kNavHeight)) style:UITableViewStylePlain];
+        self.vListView.translatesAutoresizingMaskIntoConstraints = NO;
+        self.vListView.delegate = self;
+        self.vListView.dataSource = self;
+        self.vListView.backgroundColor = [UIColor clearColor];
+        [self.vListView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+        [self.vListView setTableHeaderView:headerView];
+        self.vListView.passthroughViews = [NSArray arrayWithObject:self.mapView];
+        [self.view addSubview:self.vListView];
+    }
     
     self.annotationArray = [NSMutableArray new];
     [self loadTestingData];
@@ -166,7 +192,32 @@
 - (void)mapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view
 {
     VCPointAnnotation *pa = (VCPointAnnotation *)view.annotation;
-    NSLog(@"%ld----%ld", pa.pointID, pa.annotationType);
+    if (pa.annotationType < 3) {
+        //放大
+        mapView.centerCoordinate = pa.coordinate;
+        if (pa.annotationType == AnnotationTypeTown) {
+            [mapView setZoomLevel:15 animated:YES];
+        }else if (pa.annotationType == AnnotationTypeArea) {
+            [mapView setZoomLevel:13 animated:YES];
+        }else{
+            [mapView setZoomLevel:10 animated:YES];
+        }
+    }else{
+        //小区房源列表
+        NSLog(@"%ld----%ld", pa.pointID, pa.annotationType);
+        
+        self.houseArray = [NSArray arrayWithObjects:@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11", @"12", @"13", @"14", @"15", @"16", @"17", @"18", @"19", @"20", nil];
+        [self.vListView reloadData];
+        if (self.vListView.frame.origin.y != 0) {
+            [UIView animateWithDuration:0.3 animations:^{
+                self.mapView.frame = CGRectMake(0, kNavHeight, self.view.frame.size.width, 300);
+                self.mapView.centerCoordinate = pa.coordinate;
+                self.vListView.frame = CGRectMake(0, kNavHeight, self.view.frame.size.width, self.view.frame.size.height - (kNavHeight));
+            } completion:^(BOOL finished) {
+                self.openList = YES;
+            }];
+        }
+    }
 }
 
 - (void)refreshAnnotation
@@ -223,6 +274,45 @@
             pa.subtitle = [NSString stringWithFormat:@"%.1f万", model.price/10000.f];
             [self.annotationArray addObject:pa];
             [self.mapView addAnnotation:pa];
+        }
+    }
+}
+
+#pragma -mark
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.houseArray.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 80.f;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
+    cell.backgroundColor = [UIColor whiteColor];
+    cell.textLabel.text = self.houseArray[indexPath.row];
+    return cell;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (self.openList) {
+        if (scrollView.contentOffset.y <= -100) {
+            self.openList = NO;
+            [UIView animateWithDuration:0.3 animations:^{
+                self.mapView.frame = CGRectMake(0, kNavHeight, self.view.frame.size.width, self.view.frame.size.height - (kNavHeight));
+                self.vListView.frame = CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - (kNavHeight));
+            } completion:^(BOOL finished) {
+            }];
+        }else if (scrollView.contentOffset.y < 0) {
+            self.mapView.frame = CGRectMake(0, kNavHeight, self.view.frame.size.width, 300 - scrollView.contentOffset.y);
         }
     }
 }

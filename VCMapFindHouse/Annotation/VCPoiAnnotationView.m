@@ -29,12 +29,14 @@
         self.bgView.backgroundColor = [UIColor colorWithRed:80/255.f green:180/255.f blue:115/255.f alpha:0.9];
         self.bgView.layer.masksToBounds = YES;
         self.bgView.layer.cornerRadius = 15.f;
+        self.bgView.userInteractionEnabled = NO;
         [self addSubview:self.bgView];
     }
     if (!self.bottomBGView) {
         self.bottomBGView = [[UIImageView alloc] initWithFrame:CGRectMake(21, 30, 8, 4)];
         self.bottomBGView.image = [UIImage imageNamed:@"poi_bg_bottom"];
         self.bottomBGView.backgroundColor = [UIColor clearColor];
+        self.bottomBGView.userInteractionEnabled = NO;
         [self addSubview:self.bottomBGView];
     }
     if (!self.nameLabel) {
