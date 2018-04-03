@@ -1,5 +1,5 @@
 # VCMapFindHouse
 
-[![Watch the video]()](https://github.com/vchao/VCMapFindHouse/blob/master/WeChatSight51.mp4)
+![Image text](https://github.com/vchao/VCMapFindHouse/WeChatSight51.gif)
 
 ###### 仿链家地图找房
